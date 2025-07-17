@@ -6,6 +6,7 @@
     <title>Professional Photography | Portfolio</title>
     <meta name="description" content="Professional photographer capturing life's most precious moments with artistic vision and technical excellence.">
     
+    
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -15,6 +16,10 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
@@ -23,7 +28,22 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <i class="fas fa-camera"></i> Photography
+                <svg width="28" height="28" viewBox="0 0 100 100" class="brand-icon">
+                    <defs>
+                        <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="15" y="25" width="70" height="50" rx="8" ry="8" fill="url(#brandGradient)" stroke="#2c3e50" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="18" fill="#ecf0f1" stroke="#34495e" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="12" fill="#2c3e50"/>
+                    <circle cx="50" cy="50" r="8" fill="#34495e"/>
+                    <rect x="22" y="30" width="8" height="6" rx="2" ry="2" fill="#e74c3c"/>
+                    <rect x="35" y="30" width="12" height="6" rx="2" ry="2" fill="#34495e"/>
+                    <ellipse cx="47" cy="47" rx="4" ry="6" fill="#ecf0f1" opacity="0.7"/>
+                </svg>
+                <span class="brand-text">Photography</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -70,7 +90,40 @@
                 <div class="col-lg-6">
                     <div class="hero-image animate-on-scroll">
                         <div class="camera-icon">
-                            <i class="fas fa-camera"></i>
+                            <svg width="200" height="200" viewBox="0 0 200 200" class="hero-camera-svg">
+                                <defs>
+                                    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ecf0f1;stop-opacity:0.9" />
+                                        <stop offset="100%" style="stop-color:#bdc3c7;stop-opacity:0.7" />
+                                    </linearGradient>
+                                    <linearGradient id="heroLensGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                
+                                <!-- Camera body -->
+                                <rect x="30" y="70" width="140" height="80" rx="15" ry="15" fill="url(#heroGradient)" stroke="rgba(255,255,255,0.6)" stroke-width="3"/>
+                                
+                                <!-- Camera lens -->
+                                <circle cx="100" cy="110" r="35" fill="url(#heroLensGradient)" stroke="rgba(255,255,255,0.8)" stroke-width="3"/>
+                                <circle cx="100" cy="110" r="25" fill="#34495e"/>
+                                <circle cx="100" cy="110" r="18" fill="#2c3e50"/>
+                                
+                                <!-- Camera flash -->
+                                <rect x="50" y="80" width="15" height="10" rx="3" ry="3" fill="rgba(231,76,60,0.8)"/>
+                                
+                                <!-- Camera viewfinder -->
+                                <rect x="75" y="80" width="20" height="10" rx="3" ry="3" fill="rgba(52,73,94,0.8)"/>
+                                
+                                <!-- Lens reflections -->
+                                <ellipse cx="90" cy="100" rx="8" ry="12" fill="rgba(255,255,255,0.4)"/>
+                                <ellipse cx="105" cy="115" rx="5" ry="8" fill="rgba(255,255,255,0.3)"/>
+                                
+                                <!-- Camera strap -->
+                                <circle cx="45" cy="90" r="5" fill="rgba(255,255,255,0.6)"/>
+                                <circle cx="155" cy="90" r="5" fill="rgba(255,255,255,0.6)"/>
+                            </svg>
                         </div>
                     </div>
                 </div>

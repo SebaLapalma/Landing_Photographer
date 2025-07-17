@@ -40,11 +40,28 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
     font-weight: 600;
     color: white !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.navbar-brand i {
+.brand-icon {
     margin-right: 0.5rem;
-    color: var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+.brand-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand:hover .brand-icon {
+    transform: scale(1.1);
+}
+
+.navbar-brand:hover {
+    color: var(--secondary-color) !important;
 }
 
 .navbar-nav .nav-link {
@@ -139,6 +156,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 8rem;
     color: rgba(255, 255, 255, 0.3);
     animation: float 3s ease-in-out infinite;
+}
+
+.hero-camera-svg {
+    opacity: 0.9;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
 }
 
 @keyframes float {
